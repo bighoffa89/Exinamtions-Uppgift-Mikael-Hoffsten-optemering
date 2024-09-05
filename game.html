@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+  <!-- valt svenska så högläsnings fungtioner vet vilket språk som ska läsas-->
+
+  <!--############################### Head #################################
+
+  samma kommentar i Index filen.
+
+ ##########################################################################-->
+
+  <head>
+    <title>bighoffas Creations</title>
+    <meta name="author" content="Mikael Hoffsten" />
+    <meta name="description" content="”exinamation html och css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--wrappern om sluter allt i body som en container. -->
+
+      <!--############################### Header #################################
+
+      ##########################################################################-->
+
+      <header class="header">
+        <img
+          class="header__logo"
+          src="images/site-logga-Head.jpg"
+          loading="lazy"
+          alt="en 3d anemerad kvinna med poligon "
+        />
+
+        <nav class="header__nav">
+          <ul class="header__navigation-list">
+            <li
+              class="header__navigation-item header__navigation-item--hover-color"
+            >
+              <a href="index.html" class="header__nav-link nav-link--state"
+                >start sida</a
+              >
+            </li>
+            <li
+              class="header__navigation-item header__navigation-item--hover-color"
+            >
+              <a href="game.html" class="header__nav-link nav-link--state"
+                >Spel sida</a
+              >
+            </li>
+            <li
+              class="header__navigation-item header__navigation-item--hover-color"
+            >
+              <a href="#footer" class="header__nav-link nav-link--state"
+                >kontakter</a
+              >
+            </li>
+            <li
+              class="header__navigation-item header__navigation-item--hover-color"
+            >
+              <a
+                href="index.html#information"
+                class="header__navigation-link nav-link--state"
+                >information</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!--########################### Hero img #####################################
+        
+          ###########################################################################-->
+
+      <div class="heroimg">
+        <h1 class="heroimg__text">SE: BIG HOFFAs Games</h1>
+      </div>
+
+      <!--###########################  Aside  ######################################
+        
+          ###########################################################################-->
+
+      <aside class="reklam-ruta">
+        <section class="reklam-card">
+          <h2 class="reklam-card__titel">Space Engineers</h2>
+          <img
+            class="reklam-card__se-logga"
+            src="images/SE_logga.png"
+            loading="lazy"
+            alt="en astronaut i grått som viknkar"
+          />
+          <p class="reklam-card__text">
+            Space Engineers is a sandbox game about engineering, construction,
+            exploration and survival in space and on planets. You can build
+            space ships, space stations, planetary outposts of various sizes and
+            uses, pilot ships and travel through space to explore planets.
+          </p>
+          <a
+            class="reklam-card__link reklam-card__link--color"
+            href="https://www.spaceengineersgame.com/store/?gclid=CjwKCAjwvrOpBhBdEiwAR58-3PwTzWJrnaR0Dw15VosyNFqt869VvbteN7DL6i_XgyoSQgohALizWhoCPSsQAvD_BwE"
+            target="_blank"
+            >KÖP HÄR</a
+          >
+        </section>
+        <section class="reklam-card">
+          <h2 class="reklam-card__titel reklam-card__titel--red">
+            Space Engineers Ultimate Edition
+          </h2>
+          <img
+            class="reklam-card__se-logga"
+            src="images/SE_logga.png"
+            loading="lazy"
+            alt="en astronaut i grått som viknkar"
+          />
+          <p class="reklam-card__text">
+            Space Engineers Ultimate Edition includes the base game and all DLCs
+            for Space Engineers. Enjoy the definitive version of Space Engineers
+            as you build and explore across the stars!ts.
+          </p>
+          <a
+            class="reklam-card__link reklam-card__link--color"
+            href="https://www.spaceengineersgame.com/store/?gclid=CjwKCAjwvrOpBhBdEiwAR58-3PwTzWJrnaR0Dw15VosyNFqt869VvbteN7DL6i_XgyoSQgohALizWhoCPSsQAvD_BwE"
+            target="_blank"
+            >KÖP HÄR</a
+          >
+        </section>
+      </aside>
+
+      <!--###########################  MAiN Main #######################################
+
+      ###########################################################################-->
+
+      <main class="main">
+        <div class="game">
+          <header class="game__header">
+            <h1 class="game__header-titel">Hugg Ner Busken!</h1>
+            <button class="game__header-button knappInformation">
+              Information
+            </button>
+            <button class="game__header-button inställningsknapp">
+              Inställningar
+            </button>
+          </header>
+          <aside class="game__information information">
+            <h2>Information och Regler</h2>
+            <p>Tryck på start knappen för att starta.</p>
+            <p>Klicka på buskarna som dycker upp för att ta bort dem.</p>
+            <p>För varje buske du hugger ner får du ett poäng.</p>
+            <p>Hur många poäng får du innan tiden går ut?</p>
+          </aside>
+          <aside class="game__instellningar instellningar">
+            <h2>Svårighetsgrad</h2>
+            <button class="latt">Lätt</button>
+            <button class="normal">Normal</button>
+            <button class="svor">Svår</button>
+            <h2>Spelets längd</h2>
+            <button class="sek10">10 sek</button>
+            <button class="sek30">30 sek</button>
+            <button class="sek60">1 min</button>
+          </aside>
+          <div>
+            <section class="spelfuntioner">
+              <div class="poängTavla">
+                <h3>Poäng</h3>
+                <div class="poäng">0</div>
+              </div>
+              <div class="nerRäknare"></div>
+              <div class="tidTavla">
+                <h3>Tid kvar</h3>
+                <div class="tidKvar">0</div>
+              </div>
+            </section>
+            <div class="startknappsplats">
+              <button class="KnappSrata">Starta</button>
+            </div>
+            <div class="SpelPlan">
+              <div class="jord jord1">
+                <div class="buske"></div>
+              </div>
+              <div class="jord jord2">
+                <div class="buske"></div>
+              </div>
+              <div class="jord jord3">
+                <div class="buske"></div>
+              </div>
+              <div class="jord jord4">
+                <div class="buske"></div>
+              </div>
+              <div class="jord jord5">
+                <div class="buske"></div>
+              </div>
+              <div class="jord jord6">
+                <div class="buske"></div>
+              </div>
+            </div>
+            <audio id="spelHuggBuske" src="sonds/CoopWood.wav"></audio>
+            <audio id="startAndStopp" src="sonds/startAndStopp.mp3"></audio>
+          </div>
+          <footer>
+            <p>Mikael Hoffsten</p>
+          </footer>
+        </div>
+      </main>
+
+      <!--###########################  footer  #####################################
+
+      Foten är sidans slut som där vi har olika sektioner och en navigation.
+      och länkar.
+      Footern består av policy som har titel, text och citat,
+      navigationen ser ut som uppe i header med (ul),(li) lista med länkar (a) men
+      den har en rubrik,
+      sen har vi kontaktinformation som även är i en (ul),(li) lista och har en id
+      så man kan använda sig av sidans navigation för att hitta dit.
+      Till sist har vi sociala medier som är en (nav) med (a) samt bild i länken.
+      så när man trycker på bild-ikonen så kommer man till dess hemsida i en ny flik.
+
+
+      classer  : "main_footer" "foot_bajs" "citat" "foot_nav" "foot_kontakter"
+      .          "foot_social" "foot_social_nav"
+
+      id       : "footer"
+
+      ###########################################################################-->
+
+      <footer class="footer">
+        <!--########################  Policy  ###################################-->
+
+        <section class="footer-policy">
+          <h2 class="footer-policy__titel">policy</h2>
+          <p class="footer-policy__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
+            vitae ullam maxime numquam maiores dicta cumque dolore iusto,
+            obcaecati nobis facilis aliquid harum, suscipit dolor similique
+            quia, hic eum mollitia? Lorem ipsum dolor sit amet consectetur
+          </p>
+          <p class="footer-policy__citat">
+            I rymden kan ingen höra dig skrika!
+          </p>
+        </section>
+
+        <!--#####################  footer nav  ##################################-->
+
+        <section class="footer-navigation">
+          <h2 class="footer-navigation__titel">Navigation</h2>
+          <nav class="footer-navigation__nav">
+            <ul class="footer-navigation__list">
+              <li class="footer-navigation__item">
+                <a
+                  class="footer-navigation__link nav-link--state"
+                  href="index.html"
+                  >start sida</a
+                >
+              </li>
+              <li class="footer-navigation__item">
+                <a class="nav-link--state" href="analys.html">Analys sida</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="nav-link--state" href="#footer">kontakter</a>
+              </li>
+              <li class="footer-navigation__item">
+                <a class="nav-link--state" href="index.html#information"
+                  >information</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <!--###################  kontakter  #####################################-->
+
+        <section class="footer-kontakter" id="footer">
+          <h2>kontakter</h2>
+          <ul class="footer-kontakter__list">
+            <li class="footer-kontakter__person">Mikael Hoffsteny</li>
+            <li class="footer-kontakter__adress">köpmansgatan 5</li>
+            <li class="footer-kontakter__ort">59838 Vimmerby</li>
+            <li class="footer-kontakter__telefonnummer">0492-40344</li>
+            <li class="footer-kontakter__epostadress">bighoffa@live.se</li>
+          </ul>
+        </section>
+        <!--###################  socialamedier  ################################-->
+
+        <section class="footer-social">
+          <h2 class="footer-social__titel">socialamedier</h2>
+
+          <nav class="footer-social__nav">
+            <a
+              class="footer_social__link"
+              href="https://www.youtube.com/channel/UCfwp17ouENYR7czk4fYHs6A"
+              target="_blank"
+              ><img
+                class="footer-social__link-imges"
+                src="images/youtube-icon-tb.png"
+                loading="lazy"
+                alt="youtube ikonen är en kvadratisk röd kub med en vit trijangel i mitten"
+            /></a>
+
+            <a
+              class="footer_social__link"
+              href="https://www.facebook.com/mikael.hoffsten"
+              target="_blank"
+              ><img
+                class="footer-social__link-imges"
+                src="images/facebook-icon-tb.png"
+                loading="lazy"
+                alt="facebook ikon som är en blå rund cirkel runt en ett blåt F i mitten"
+            /></a>
+
+            <a
+              class="footer_social__link"
+              href="https://www.instagram.com/bighoffa89/"
+              target="_blank"
+              ><img
+                class="footer-social__link-imges"
+                src="images/insta-icon-tb.png"
+                loading="lazy"
+                alt="instagram ikonen är en kvadratisk kamra som är rängbågs färgad "
+            /></a>
+          </nav>
+        </section>
+
+        <!--#########################  nästan klar  #####################################-->
+      </footer>
+    </div>
+  </body>
+  <script src="game.js"></script>
+</html>
+
+<!--#########################################################################################-->
+<!--#########################  Du klara dig igenom allt #####################################-->
+<!--#########################  Du får en guld sjärna ########################################-->
+<!--#########################################################################################-->
+<!--#########################  Nästa sida nu!  ##############################################-->
+<!--#########################################################################################-->

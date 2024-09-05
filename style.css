@@ -1,0 +1,439 @@
+/*############################# css reset ###################################
+ Normalize 
+###########################################################################*/
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+
+/*############################### Fonts #####################################
+###########################################################################*/
+
+@font-face {
+  font-family: "open sans";
+  src: url(fonts/opensans-regular-webfont.woff) format(woff);
+  src: url(fonts/opensans-regular-webfont.woff2) format(woff2);
+}
+@font-face {
+  font-family: "aguante";
+  src: url(fonts/aguante-regular-webfont.woff) format(woff);
+  src: url(fonts/aguante-regular-webfont.woff2) format(woff2);
+}
+@font-face {
+  font-family: "newtserif";
+  src: url(fonts/newtserif-italic-webfont.woff) format(woff);
+  src: url(fonts/newtserif-italic-webfont.woff2) format(woff2);
+}
+
+/*############################# border box ###################################
+############################################################################*/
+
+* {
+  box-sizing: border-box;
+}
+
+/*############################### wrapper ####################################
+############################################################################*/
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "open sans";
+  display: grid;
+  grid-template-rows: 4rem 20rem auto auto auto;
+  grid-template-areas:
+    "m_head"
+    "he_img"
+    "m_asid"
+    "m_main"
+    "m_foot";
+  background-color: rgba(85, 85, 85, 0.616);
+}
+.header {
+  grid-area: m_head;
+}
+.heroimg {
+  grid-area: he_img;
+}
+.reklam_ruta {
+  grid-area: m_asid;
+}
+.main {
+  grid-area: m_main;
+}
+.footer {
+  grid-area: m_foot;
+}
+
+/*######################  för inställningar  ###############################
+###########################################################################*/
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-family: "aguante";
+}
+p {
+  max-width: 75ch;
+}
+
+section {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+main {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: orange;
+}
+html {
+  line-height: 1.5;
+}
+.nav-link--state:visited {
+  color: blueviolet;
+}
+.nav-link--state:active {
+  color: red;
+}
+/*############################### body img back #############################
+###########################################################################*/
+
+body {
+  background-image: url(images/1back-g-universe.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 900px) {
+  body {
+    background-image: url(images/2back-g-universe.jpg);
+  }
+}
+@media (max-width: 575px) {
+  body {
+    background-image: url(images/3back-g-universe.jpg);
+  }
+}
+
+/*############################### header ####################################
+###########################################################################*/
+
+.header {
+  background-color: rgba(87, 107, 173, 0.589);
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  height: 3.8rem;
+  width: 3.8rem;
+  border-radius: 50%;
+}
+.header__navigation-list {
+  list-style: none;
+  display: flex;
+  column-gap: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+}
+.header__navigation-item {
+  background-color: black;
+  line-height: 2rem;
+  padding: 0 0.45rem;
+  border-radius: 1.5rem;
+  border: white;
+  border-style: solid;
+}
+.header__navigation-item--hover-color:hover {
+  background-color: #8f8f3e;
+}
+
+.header__navigation-link {
+  font-weight: bold;
+}
+
+/*############################### hero-img ##################################
+###########################################################################*/
+
+.heroimg {
+  background-image: url(images/SE-hero-img-planet.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .heroimg {
+    background-image: url(images/2SE-hero-img-planet.jpg);
+  }
+}
+@media (max-width: 575px) {
+  .heroimg {
+    background-image: url(images/3SE-hero-img-planet.jpg);
+  }
+}
+.heroimg__text {
+  background-color: black;
+  color: yellow;
+}
+
+/*############################### aside #####################################
+###########################################################################*/
+.reklam-ruta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0rem 1rem;
+}
+.reklam-card {
+  height: auto;
+  width: auto;
+  max-width: 37rem;
+  background-image: url(images/space-engineers-back.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+}
+@media (max-width: 575px) {
+  .reklam-card {
+    background-image: url(images/2space-engineers-back.jpg);
+  }
+}
+.reklam-card__titel {
+  color: #ffff00;
+}
+.reklam-card__titel--red {
+  color: #e11b14;
+}
+.reklam-card__se-logga {
+  height: 8rem;
+  width: 8rem;
+}
+.reklam-card__text {
+  padding: 1rem;
+  background-color: #ffff00;
+  border-radius: 1rem;
+  color: black;
+}
+.reklam-card__link {
+  margin: 1rem;
+  font-weight: bold;
+  line-height: 2rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 1.5rem;
+}
+.reklam-card__link--color {
+  background-color: orange;
+  color: black;
+}
+.reklam-card__link--color:hover {
+  background-color: #bebe54;
+}
+
+/*############################### main main #####################################
+###########################################################################*/
+
+.products {
+  text-align: center;
+  margin: 1rem 0;
+}
+.products__titel {
+  background-color: rgb(87, 107, 173);
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.products__contaner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0rem 1rem;
+}
+
+.product-card {
+  border-radius: 1rem;
+  height: auto;
+  width: 15rem;
+  background-color: rgb(198, 199, 204);
+  border: black;
+  border-style: dotted;
+}
+
+.product-card--hover-color:hover {
+  background-color: antiquewhite;
+}
+
+.product-card__titel {
+  text-align: center;
+}
+.product-card__titel--red {
+  color: #7f100c;
+}
+.product-card__image {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+}
+.main-information {
+  height: auto;
+  width: auto;
+  background-color: yellow;
+}
+.Prenumerera {
+  height: auto;
+  width: auto;
+  background-color: yellow;
+}
+.Prenumerera__text {
+  margin-bottom: 0.5rem;
+}
+
+/*############################### fotter ####################################
+###########################################################################*/
+
+.footer {
+  background-color: black;
+  color: yellow;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "foot_bj foot_na foot_kt foot_sc";
+  justify-content: space-between;
+}
+.footer-policy {
+  grid-area: foot_bj;
+}
+.footer-navigation {
+  grid-area: foot_na;
+}
+.footer-kontakter {
+  grid-area: foot_kt;
+}
+.footer-social {
+  grid-area: foot_sc;
+}
+.footer-policy__citat {
+  font-family: "newtserif";
+  display: inline;
+}
+.footer-navigation__list {
+  padding-left: 1rem;
+}
+.footer-kontakter__list {
+  padding-left: 1rem;
+}
+.footer-social__link-imges {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+/*############################### media ####################################
+###########################################################################*/
+
+/* 1 */
+
+@media (max-width: 900px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "foot_bj foot_bj foot_bj"
+      "foot_kt foot_na foot_sc";
+  }
+  .footer-policy__text {
+    max-width: 55ch;
+  }
+}
+
+/* 2 */
+
+@media (max-width: 700px) {
+  .reklam-ruta {
+    flex-wrap: wrap;
+  }
+  .reklam-card {
+    max-width: 100%;
+  }
+  .footer {
+    display: table-column;
+  }
+}
+/* 3 */
+
+@media (max-width: 575px) {
+  .wrapper {
+    grid-template-rows: auto 20rem auto auto auto;
+
+    padding: 0;
+  }
+  .header {
+    height: auto;
+  }
+  .header__logo {
+    height: 4.3rem;
+    width: 4.3rem;
+  }
+
+  .header__navigation-list {
+    display: grid;
+  }
+  .header__navigation-item {
+    margin-bottom: 0.3rem;
+  }
+
+  /*========[---kommere ner till omkring 250px på start sidan och 375px på analys sidan sen blir det en skroll värtikalt]==========*/
+
+  .product-card {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*############################### print #####################################
+###########################################################################*/
+
+@media print {
+  header,
+  nav,
+  footer,
+  aside {
+    display: none;
+  }
+  * {
+    font-family: serif;
+  }
+  p {
+    font-size: 11pt;
+    color: black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: black;
+    font-family: "open sans";
+  }
+  .footer-kontakter {
+    color: black;
+  }
+  .product-card {
+    border-style: none;
+  }
+
+  .product-card__image {
+    height: 9rem;
+    width: 13rem;
+  }
+  html {
+    line-height: 1.15;
+  }
+}
+/*###########################################################################*/
